@@ -1,11 +1,9 @@
 #!/usr/bin/python3
 
-def print_matrix_integer(matrix=[[]])::
-    if matrix is None:
-        return
-    for row in matrix:
-        for i, col in enumerate(row):
-            if i != len(row) - 1:
-                print("{:d}".format(col), end=" ")
-            else:
-                print("{:d}".format(col))
+def print_matrix_integer(matrix=[[]]):
+    for i in range(len(matrix)):
+        for j in range(len(matrix[i])):
+            if j != 0:
+                print(" ", end='')
+            print("{:d}".format(matrix[i][j]), end='')
+        print()
