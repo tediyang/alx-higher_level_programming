@@ -6,7 +6,9 @@ def add_tuple(tuple_a=(), tuple_b=()):
 
     a, b = 0, 0
     if tuple_a < 2 or tuple_b < 2:
-        if tuple_a < 2:
+        if tuple_a < 2 and tuple_b < 2:
+            a += tuple_a[0] + tuple_b[0]
+        elif tuple_a < 2:
             a += tuple_a[0] + tuple_b[0]
             b += tuple_b[1]
         else:
