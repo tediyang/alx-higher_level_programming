@@ -1,8 +1,10 @@
 #!/usr/bin/python3
 
-def add_tuple(tuple_a=(), tuple_b=()):                                                                                             
+def add_tuple(tuple_a=(), tuple_b=()):
+    if not tuple_a and not tuple_b:
+        return
     if not tuple_a or not tuple_b:                                                                                                 
-        return tuple_a[:2] or tuple_b[:2] if len(tuple_a) >= 2 or len(tuple_b) >= 2 else tuple_a or tuple_b                                                                                                 
+        return tuple_a[:2] or tuple_b[:2] if len(tuple_a) >= 2 or len(tuple_b) >= 2 else tuple_a or tuple_b
                                                                                                                                    
     a, b = 0, 0                                                                                                                    
     if len(tuple_a) < 2 or len(tuple_b) < 2:                                                                                                 
