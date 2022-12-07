@@ -2,7 +2,7 @@
 
 def add_tuple(tuple_a=(), tuple_b=()):
     if not tuple_a and not tuple_b:
-        return
+        return (0, 0)
     if not tuple_a or not tuple_b:                                                                                                 
         return tuple_a[:2] or tuple_b[:2] if len(tuple_a) >= 2 or len(tuple_b) >= 2 else tuple_a or tuple_b
                                                                                                                                    
