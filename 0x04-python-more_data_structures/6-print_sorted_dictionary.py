@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-def print_sortrd_dictionary(a_dictionary):
+def print_sorted_dictionary(a_dictionary):
     new = sorted(a_dictionary)
 
     for i in new:
