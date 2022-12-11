@@ -26,8 +26,8 @@ def roman_to_int(roman_string):
         # it is a complex roman number (IV, XL etc.) or not.
         else:
             if (r_list[-1] == 'I' and (r == 'V' or r == 'X')) \
-            or (r_list[-1] == 'X' and (r == 'L' or r == 'C')) \
-            or (r_list[-1] == 'C' and (r == 'D' or r == 'M')):
+             or (r_list[-1] == 'X' and (r == 'L' or r == 'C')) \
+             or (r_list[-1] == 'C' and (r == 'D' or r == 'M')):
                 number += (rom[r] - rom[r_list[-1]]*2)
 
             else:
