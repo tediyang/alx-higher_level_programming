@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 
+'''Square Class'''
 class Square:
-    ''' This class focuses on Square module'''
+    ''' This is an empty square class that returns nothing.'''
     return
