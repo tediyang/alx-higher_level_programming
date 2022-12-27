@@ -1,6 +1,6 @@
 #!/usr/bin/python3
-'''Square Class'''
+"""Square Class"""
 
 class Square:
-    ''' This is an empty square class that returns nothing.'''
+    """This is an empty square class that returns nothing."""
     return
