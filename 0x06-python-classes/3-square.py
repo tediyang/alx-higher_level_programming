@@ -1,6 +1,5 @@
 #!/usr/bin/python3
-"""
-    Class Square: This class uses a private
+""" Class Square: This class uses a private
     attributes called size and calculates the
     area of the square/.
 """
