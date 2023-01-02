@@ -1,0 +1,44 @@
+# 3-say_my_name.txt
+# Eyang, Daniel Eyoh
+
+===========================
+How to use 3-say_my_name.py
+===========================
+
+This script's module accepts two parameters (first_name/ pos-arg and
+last_name/keyw-arg which defaults to "") and prints a string containing the parameters.
+
+Usage
+=====
+
+```say_my_name(first_name, last_name="")``` prints a
+string casting the first_name and last_name.
+
+::
+
+    >>> say_my_name = __import__('3-say_my_name').say_my_name
+    >>> say_my_name("John", "Smith")
+    My name is John Smith
+    >>> say_my_name("Walter", "White")
+    My name is Walter White
+    >>> say_my_name("Bob")
+    My name is Bob 
+
+If a no arguments are passed, raise a TypeError.
+
+::
+
+    >>> say_my_name()
+    Traceback (most recent call last):
+    TypeError: say_my_name() missing 1 required positional argument: 'first_name'
+
+If first_name or last_name are not strings, raise a TypeError.
+
+::
+
+    >>> say_my_name(12, "Mercy")
+    Traceback (most recent call last):
+    TypeError: first_name must be a string
+    >>> say_my_name("teddy", 35.2)
+    Traceback (most recent call last):
+    TypeError: last_name must be a string
