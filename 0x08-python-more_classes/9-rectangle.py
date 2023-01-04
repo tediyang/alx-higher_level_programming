@@ -1,3 +1,7 @@
+#!/usr/bin/python3
+''' Rectangle Module '''
+
+
 class Rectangle:
     '''
     Rectangle Object that calculates the area and perimeter of a rectangle
