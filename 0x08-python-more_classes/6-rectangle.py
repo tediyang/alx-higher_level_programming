@@ -3,10 +3,10 @@
 
 
 class Rectangle:
-  '''
-      Rectangle Object that calculates the area and perimeter of a rectangle
-      and uses a class attribute to check the number of objects created.
-  '''
+    '''
+    Rectangle Object that calculates the area and perimeter of a rectangle
+    and uses a class attribute to check the number of objects created.
+    '''
   
     number_of_instances = 0
 
