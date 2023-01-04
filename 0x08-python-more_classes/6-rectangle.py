@@ -7,7 +7,7 @@ class Rectangle:
     Rectangle Object that calculates the area and perimeter of a rectangle
     and uses a class attribute to check the number of objects created.
     '''
-  
+
     number_of_instances = 0
 
     def __init__(self, width=0, height=0):
