@@ -3,6 +3,7 @@
 
 
 def text_indentation(text):
+    '''This function prints a string and add indentation when necessary'''
     if text is None:
         raise TypeError("text_indentation() missing 1 required positional argument: 'text'")
 
