@@ -76,4 +76,4 @@ class Rectangle:
       
     def __del__(self):
         """ Return a string when an attribute is deleted """
-        return 'Bye rectangle...'
+        print('Bye rectangle...')
