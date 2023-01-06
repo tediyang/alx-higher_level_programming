@@ -1,4 +1,4 @@
-#!/b9n/usr/python3
+#!/bin/usr/python3
 '''Copy a list'''
 
 def copy_list(l):
