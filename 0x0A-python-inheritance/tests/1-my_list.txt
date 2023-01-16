@@ -1,0 +1,13 @@
+# 1-my_list.txt
+# Eyang, Daniel Eyoh
+
+========================
+How to use 1-my_list.txt
+========================
+
+```This class inherit from a list and sort the list parameter```
+
+Usage
+=====
+
+```print sorted()``` prints the sorted list.
