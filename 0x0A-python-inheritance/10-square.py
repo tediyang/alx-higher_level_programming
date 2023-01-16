@@ -9,11 +9,8 @@ class Square(Rectangle):
         '''initialization'''
         self.integer_validator("size", size)
         self.__size = size
+        Rectangle.__init__(self, size, size)
 
     def area(self):
         '''return the area of a square'''
         return self.__size ** 2
-
-    def __str__(self):
-        '''return the model name and parameter'''
-        return f"[Rectangle] {self.__size}/{self.__size}"
