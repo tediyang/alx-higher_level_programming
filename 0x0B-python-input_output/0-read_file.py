@@ -4,5 +4,5 @@
 
 def read_file(filename=""):
     '''prints the bytes converted to string in a file'''
-    with open(filename, encoding="utf-8") as f:
+    with open(filename, mode='rb', encoding="utf-8") as f:
         print(f.read())
