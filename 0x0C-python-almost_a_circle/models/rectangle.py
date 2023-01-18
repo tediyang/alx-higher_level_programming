@@ -91,3 +91,8 @@ class Rectangle(Base):
         self.setter_validator("y", value)
         self.__y = value
 
+    def area(self):
+        '''
+            get the area
+        '''
+        return self.width * self.height
