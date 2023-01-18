@@ -111,4 +111,5 @@ class Rectangle(Base):
         '''
             returns the parameters
         '''
-        return f'[Rectangle] ({self.id}) {self.x}/{self.y} - {self.width}/{self.height}'
+        return f'[Rectangle] ({self.id}) {self.x}/{self.y} \
+- {self.width}/{self.height}'
