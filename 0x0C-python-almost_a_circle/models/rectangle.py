@@ -1,28 +1,41 @@
 #!/usr/bin/python3
-'''Rectangle Model'''
-Base = __import__("base").Base
+'''
+    Rectangle Model
+'''
+from models.base import Base
 
 
 class Rectangle(Base):
-    '''Rectangle class that inherits from Base'''
+    '''
+        Rectangle class that inherits from Base
+    '''
     def __init__(self, width, height, x=0, y=0, id=None):
-        '''Initialization'''
+        '''
+            Initialization
+        '''
         self.width = width
         self.height = height
         self.x = x
         self.y = y
         self.id = id
+        '''
+            Check if id was passed
+        '''
         if self.id is None:
             super().__init__(id=None)
 
     @property
     def width(self):
-        '''width getter'''
+        '''
+            width getter
+        '''
         return self.__width
 
     @width.setter
     def width(self, value):
-        '''width setter'''
+        '''
+            width setter
+        '''
         if type(value) != int:
             raise TypeError('width must be an integer')
         if value < 0:
@@ -31,12 +44,16 @@ class Rectangle(Base):
 
     @property
     def height(self):
-        '''height getter'''
+        '''
+            height getter
+        '''
         return self.__height
 
     @height.setter
     def height(self, value):
-        '''height setter'''
+        '''
+            height setter
+        '''
         if type(value) != int:
             raise TypeError('height must be an integer')
         if value < 0:
@@ -45,12 +62,16 @@ class Rectangle(Base):
 
     @property
     def x(self):
-        '''x getter'''
+        '''
+            x getter
+        '''
         return self.__x
 
     @x.setter
     def x(self, value):
-        '''x setter'''
+        '''
+            x setter
+        '''
         if type(value) != int:
             raise TypeError('x must be an integer')
         if value < 0:
@@ -59,12 +80,16 @@ class Rectangle(Base):
 
     @property
     def y(self):
-        '''y getter'''
+        '''
+            y getter
+        '''
         return self.__y
 
     @y.setter
     def y(self, value):
-        '''y setter'''
+        '''
+            y setter
+        '''
         if type(value) != int:
             raise TypeError('y must be an integer')
         if value < 0:
