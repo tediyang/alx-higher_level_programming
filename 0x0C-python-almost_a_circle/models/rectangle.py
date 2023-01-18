@@ -22,7 +22,7 @@ class Rectangle(Base):
             Check if id was passed
         '''
         if self.id is None:
-            super().__init__(id=None)
+            super().__init__(id)
 
     @property
     def width(self):
