@@ -17,12 +17,7 @@ class Rectangle(Base):
         self.height = height
         self.x = x
         self.y = y
-        self.id = id
-        '''
-            Check if id was passed
-        '''
-        if self.id is None:
-            super().__init__(id)
+        super().__init__(id)
 
     def setter_validator(self, name, value):
         '''validate the values before assignment'''
