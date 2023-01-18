@@ -24,6 +24,16 @@ class Rectangle(Base):
         if self.id is None:
             super().__init__(id)
 
+    def setter_validator(self, name, value):
+        '''validate the values before assignment'''
+        if not isinstance(value, int):
+            raise TypeError(f'{name} must be an integer')
+        if name in ('width', 'height'):
+            if value <= 0:
+                raise ValueError(f'{name} must be > 0')
+        if value < 0:
+            raise ValueError(f'{name} must be >= 0')
+
     @property
     def width(self):
         '''
@@ -36,10 +46,7 @@ class Rectangle(Base):
         '''
             width setter
         '''
-        if type(value) != int:
-            raise TypeError('width must be an integer')
-        if value < 0:
-            raise ValueError('width must be >= 0')
+        self.setter_validator("width", value)
         self.__width = value
 
     @property
@@ -54,10 +61,7 @@ class Rectangle(Base):
         '''
             height setter
         '''
-        if type(value) != int:
-            raise TypeError('height must be an integer')
-        if value < 0:
-            raise ValueError('height must be >= 0')
+        self.setter_validator("height", value)
         self.__height = value
 
     @property
@@ -72,10 +76,7 @@ class Rectangle(Base):
         '''
             x setter
         '''
-        if type(value) != int:
-            raise TypeError('x must be an integer')
-        if value < 0:
-            raise ValueError('x must be >= 0')
+        self.setter_validator("x", value)
         self.__x = value
 
     @property
@@ -90,9 +91,6 @@ class Rectangle(Base):
         '''
             y setter
         '''
-        if type(value) != int:
-            raise TypeError('y must be an integer')
-        if value < 0:
-            raise ValueError('y must be >= 0')
+        self.setter_validator("y", value)
         self.__y = value
 
