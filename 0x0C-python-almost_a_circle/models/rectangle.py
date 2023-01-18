@@ -99,8 +99,11 @@ class Rectangle(Base):
 
     def display(self):
         '''print the shape'''
-        for i in range(self.height):
-            for j in range(self.width):
+        for i in range(self.y):
+            print()
+        for j in range(self.height):
+            print(' ' * self.x, end='')
+            for k in range(self.width):
                 print("#", end='')
             print()
 
