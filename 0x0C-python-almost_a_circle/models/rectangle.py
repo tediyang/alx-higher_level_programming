@@ -17,7 +17,9 @@ class Rectangle(Base):
         self.height = height
         self.x = x
         self.y = y
-        super().__init__(id)
+        self.id = id
+        if self.id is None:
+            Base.__init__(self, id)
 
     def setter_validator(self, name, value):
         '''validate the values before assignment'''
