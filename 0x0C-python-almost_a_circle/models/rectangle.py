@@ -101,5 +101,5 @@ class Rectangle(Base):
         '''print the shape'''
         for i in range(self.height):
             for j in range(self.width):
-                print('#')
+                print("#", end='')
             print()
