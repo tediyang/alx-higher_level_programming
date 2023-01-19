@@ -112,7 +112,7 @@ class Rectangle(Base):
         attr = ['id', 'width', 'height', 'x', 'y']
 
         if len(args) > 0 and args is not None:
-            for i in enumerate(args):
+            for i, _ in enumerate(args):
                 setattr(self, attr[i], args[i])
         else:
             if len(kwargs) > 0:
