@@ -24,7 +24,7 @@ class Square(Rectangle):
         '''update the parameter values'''
         params = ['id', 'size', 'x', 'y']
         if args is not None and len(args) > 0:
-            for i in enumerate(args):
+            for i, _ in enumerate(args):
                 setattr(self, params[i], args[i])
         else:
             if len(kwargs) > 0:
