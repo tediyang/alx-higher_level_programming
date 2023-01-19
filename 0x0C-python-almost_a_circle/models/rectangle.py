@@ -107,17 +107,17 @@ class Rectangle(Base):
                 print("#", end='')
             print()
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         '''Update the values'''
-        try:
-            self.id = args[0]
-            self.width = args[1]
-            self.height = args[2]
-            self.x = args[3]
-            self.y = args[4]
+        attr = ['id', 'width', 'height', 'x', 'y']
 
-        except IndexError:
-            pass
+        if len(args) > 0 and args is not None:
+            for i in enumerate(args):
+                setattr(self, attr[i], args[i])
+        else:
+            if len(kwargs) > 0:
+                for key, value in kwargs.items():
+                    setattr(self, key, value)
 
     def __str__(self):
         '''
