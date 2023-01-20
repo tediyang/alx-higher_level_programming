@@ -59,7 +59,7 @@ class Base:
             return []
 
         with open(filename, 'r', encoding='utf-8') as f:
-                read_file = f.read()
+            read_file = f.read()
 
         conv_file = cls.from_json_string(read_file)
         conv_list = [cls.create(**dic) for _, dic in enumerate(conv_file)]
