@@ -29,7 +29,7 @@ class Base:
         if list_objs is not None:
             list_dic = [dic.to_dictionary() for _, dic in enumerate(list_objs)]
 
-        with open(filename, 'w', encoding='utf-8'):
+        with open(filename, 'w', encoding='utf-8') as f:
             f.write(cls.to_json_string(list_dic))
 
     @staticmethod
