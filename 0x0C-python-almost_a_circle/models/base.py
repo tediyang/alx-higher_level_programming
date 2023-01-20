@@ -38,3 +38,13 @@ class Base:
         if json_string is None or len(json_string) < 1:
             return []
         return json.loads(json_string)
+
+    @classmethod
+    def create(cls, **dictionary):
+        '''create a class'''
+        if cls.__name__ == 'Square':
+            dummy = cls(1)
+        else:
+            dummy = cls(1, 2)
+        dummy.update(**dictionary)
+        return dummy
