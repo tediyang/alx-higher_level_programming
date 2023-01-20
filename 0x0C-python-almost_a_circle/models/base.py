@@ -31,3 +31,10 @@ class Base:
 
         with open(filename, 'w', encoding='utf-8'):
             f.write(cls.to_json_string(list_dic))
+
+    @staticmethod
+    def from_json_string(json_string):
+        '''convert from json string'''
+        if json_string is None or len(json_string) < 1:
+            return []
+        return json.loads(json_string)
