@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 '''Base Model'''
 import json
+import os.path
 
 
 class Base:
@@ -54,13 +55,13 @@ class Base:
         '''load data from a json file'''
         filename = f'{cls.__name__}.json'
 
-        try:
-            with open(filename, 'r', encoding='utf-8') as f:
-                read_file = f.read()
-        except IOError:
+        if os.path.exists(filename) is False:
             return []
-        finally:
-            conv_file = cls.from_json_string(read_file)
-            conv_list = [cls.create(**dic) for _, dic in enumerate(conv_file)]
+
+        with open(filename, 'r', encoding='utf-8') as f:
+                read_file = f.read()
+
+        conv_file = cls.from_json_string(read_file)
+        conv_list = [cls.create(**dic) for _, dic in enumerate(conv_file)]
 
         return conv_list
