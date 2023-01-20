@@ -48,3 +48,19 @@ class Base:
             dummy = cls(1, 2)
         dummy.update(**dictionary)
         return dummy
+
+    @classmethod
+    def load_from_file(cls):
+        '''load data from a json file'''
+        filename = f'{cls.__name__}.json'
+
+        try:
+            with open(filename, 'r', encoding='utf-8') as f:
+                read_file = f.read()
+        except IOError:
+            return []
+        finally:
+            conv_file = cls.from_json_string(read_file)
+            conv_list = [cls.create(**dic) for _, dic in enumerate(conv_file)]
+
+        return conv_list
