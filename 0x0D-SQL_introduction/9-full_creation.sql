@@ -1,6 +1,6 @@
 -- Create another table and insert values.
 -- Query that creates another table and insert values.
-CREATE TABLE IF EXISTS second_table (
+CREATE TABLE IF NOT EXISTS second_table (
 	id INT
 	name VARCHAR(256)
 	score INT);
