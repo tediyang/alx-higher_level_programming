@@ -2,4 +2,4 @@
 -- Query to print name and score based on the highest.
 SELECT score, name
 FROM second_table
-ORDER BY score DESC;
+ORDER BY 1 DESC;
