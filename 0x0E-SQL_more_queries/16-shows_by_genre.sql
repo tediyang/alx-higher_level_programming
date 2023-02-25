@@ -6,4 +6,4 @@ LEFT JOIN tv_show_genres tsg
 ON tv.id = tsg.show_id
 LEFT JOIN tv_genres tg
 ON tg.id = tsg.genre_id
-ORDER BY 1;
+ORDER BY 1, 2;
