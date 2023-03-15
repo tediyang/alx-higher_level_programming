@@ -1,7 +1,7 @@
 #!/usr/bin/node
 let len;
-for (len = 0; process.argv[len]; len++) {
-  ;
+for (len = 0; process.argv[len];) {
+  len++;
 }
 if (len === 2) {
   console.log('No argument');
