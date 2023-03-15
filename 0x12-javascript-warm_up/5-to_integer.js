@@ -8,7 +8,7 @@ if (len === 2) {
 } else {
   const digit = parseInt(process.argv[2], 10);
   if (Number.isInteger(digit)) {
-    console.log(digit);
+    console.log(`My number: ${digit}`);
   } else {
     console.log('Not a number');
   }
