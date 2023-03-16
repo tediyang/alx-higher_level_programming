@@ -1,7 +1,7 @@
 #!/usr/bin/node
 function add (a, b) {
   if (a && b) {
-    console.log(a * b);
+    console.log(`${a * b}`);
   } else {
     console.log('NaN');
   }
