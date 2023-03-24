@@ -20,7 +20,10 @@ def main(argv):
     Session = sessionmaker(bind=engine)
     session = Session()
     instance = session.query(State).order_by(State.id).first()
-    print(instance)
+    if instance:
+        print(instance)
+    else:
+        print('Nothing')
     session.close()
 
 
