@@ -15,12 +15,10 @@ def main(argv):
             @localhost/{argv[3]}"""
     engine = create_engine(URL, pool_pre_ping=True)
 
-    Base.metadata.create_all(engine)
-
     Session = sessionmaker(bind=engine)
     session = Session()
     instance = session.query(State.id).filter(
-            State.name=argv[4]).order_by(State.id).first()
+            State.name == argv[4])
     if instance:
         print(instance)
     else:
