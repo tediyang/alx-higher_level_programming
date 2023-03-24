@@ -10,7 +10,7 @@ def main(argv):
     cur = db.cursor()
     cur.execute("SELECT * FROM states ORDER BY id")
     rows = cur.fetchall()
-    for state in row:
+    for state in rows:
         print(state)
     cur.close()
     db.close()
