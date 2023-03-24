@@ -18,7 +18,7 @@ def main(argv):
     Session = sessionmaker(bind=engine)
     session = Session()
     instance = session.query(State.id).filter(
-            State.name == argv[4])
+            State.name == argv[4]).first()
     if instance:
         print(instance)
     else:
