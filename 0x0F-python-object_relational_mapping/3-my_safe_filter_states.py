@@ -13,7 +13,7 @@ def main(argv):
                         passwd=argv[2], db=argv[3])
     cur = db.cursor()
     user = re.match('[A-Za-z0-9]+', argv[4])
-    cur.execute("SELECT * FROM states WHERE name = {} ORDER BY id"
+    cur.execute("SELECT * FROM states WHERE name = BINARY '{}' ORDER BY id"
                 .format(user.group(0)))
     rows = cur.fetchall()
     for state in rows:
