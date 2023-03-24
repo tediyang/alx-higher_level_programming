@@ -20,7 +20,7 @@ def main(argv):
     instance = session.query(State.id).filter(
             State.name == argv[4]).first()
     if instance:
-        print(instance)
+        print('{0}'.format(instance))
     else:
         print('Not found')
     session.close()
