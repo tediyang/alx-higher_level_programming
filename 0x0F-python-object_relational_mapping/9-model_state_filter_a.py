@@ -11,8 +11,8 @@ def main(argv):
     """ create the table in the database and print
         the first instance.
     """
-    URL = f"""mysql+mysqldb://{sys.argv[1]}:{sys.argv[2]}
-            @localhost/{sys.argv[3]}"""
+    URL = f"""mysql+mysqldb://{argv[1]}:{argv[2]}
+            @localhost/{argv[3]}"""
     engine = create_engine(URL, pool_pre_ping=True)
 
     Base.metadata.create_all(engine)
