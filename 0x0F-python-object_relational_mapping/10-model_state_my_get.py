@@ -17,10 +17,10 @@ def main(argv):
 
     Session = sessionmaker(bind=engine)
     session = Session()
-    instance = session.query(State.id).filter(
+    id_ = session.query(State.id).filter(
             State.name == argv[4]).first()
-    if instance:
-        print(instance)
+    if id_:
+        print(id_[0])
     else:
         print('Not found')
     session.close()
