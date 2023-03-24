@@ -18,8 +18,8 @@ def main(argv):
 
     Session = sessionmaker(bind=engine)
     session = Session()
-    rows = session.query(City, State).join(City.state_id, State.id).order_by(City.id)
-    for s, c in rows:
+    rows = session.query(State, City).join(City.state_id, State.id).order_by(City.id)
+    for c, s in rows:
         print(f"{s.name}: ({c.id}) {c.name}")
     session.close()
 
