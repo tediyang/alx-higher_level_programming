@@ -1,6 +1,8 @@
 #!/usr/bin/python3
+'''Import modules'''
 import sys
 import MySQLdb
+
 
 def main(argv):
     """ Access database and print all the states. """
@@ -12,6 +14,7 @@ def main(argv):
         print(state)
     cur.close()
     db.close()
+
 
 if __name__ == "__main__":
     main(sys.argv)
