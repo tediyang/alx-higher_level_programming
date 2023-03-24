@@ -1,16 +1,17 @@
 #!/usr/bin/python3
 import sys
-import MySQLdb as engine
-
+import MySQLdb
 
 def main(argv):
-    ''' access a database and prints all the data. '''
-    db = engine.connect(host="3306", user=argv[1], passwd=argv[2], db=argv[3])
+    """ Access database and print all the states. """
+    db = MySQLdb.connect(host="3306", user=argv[1], passwd=argv[2], db=argv[3])
     cur = db.cursor()
-    data = cur.execute("SELECT * FROM states")
-    for state in data:
+    cur.execute("SELECT * FROM states ORDER BY id")
+    rows = cur.fetchall()
+    for state in row:
         print(state)
-
+    cur.close()
+    db.close()
 
 if __name__ == "__main__":
-    main(sys.argvi)
+    main(sys.argv)
