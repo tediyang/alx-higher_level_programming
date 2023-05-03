@@ -1,5 +1,5 @@
 #!/usr/bin/node
-// Read the file and print its contents.
+// Write to a file.
 const fs = require('fs');
 const filename = process.argv[2];
 const words = process.argv[3];
