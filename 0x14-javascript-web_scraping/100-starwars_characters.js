@@ -18,8 +18,8 @@ request(URL, (error, response, body) => {
   if (error) throw error;
   const filmChars = JSON.parse(body).characters
     .map(character => request(character, (err, res, bdy) => {
-        if (err) throw err;
-        JSON.parse(bdy).name;
+      if (err) throw err;
+      JSON.parse(bdy).name;
     }));
   console.log(filmChars);
 });
