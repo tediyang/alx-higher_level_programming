@@ -19,7 +19,6 @@ request(URL, (err, res, body) => {
   const taskComp = {};
   const tasks = JSON.parse(body);
   for (const task of tasks) {
-    console.log(task);
     if (task.completed) {
       if (taskComp[task.userId] === undefined) {
         taskComp[task.userId] = 1;
