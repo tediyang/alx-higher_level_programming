@@ -13,8 +13,9 @@ const URL = process.argv[2];
 request(URL, (err, res, body) => {
   if (err) throw err;
   const films = JSON.parse(body).results
-    .map(film => film.characters)
-    .filter(character => character.includes('18'));
+   .map(film => film.characters)
+   .map(character => character.filter(char_mov => char_mov.includes('18')))
+   .filter(list => list.length != 0);
   console.log(films.length);
   }
 );
