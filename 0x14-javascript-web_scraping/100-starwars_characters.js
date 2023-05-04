@@ -17,7 +17,7 @@ const URL = `https://swapi-api.alx-tools.com/api/films/${id}`;
 request(URL, (error, response, body) => {
   if (error) throw error;
   const filmChars = JSON.parse(body).characters;
-  for (const character of characters) {
+  for (const character of filmChars) {
     request(character, (err, res, bdy) => {
       if (err) throw err;
       console.log(JSON.parse(bdy).name);
