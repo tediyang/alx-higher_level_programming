@@ -18,6 +18,7 @@ request(URL, (err, res, body) => {
   if (err) throw err;
   const taskComp = {};
   const tasks = JSON.parse(body);
+  // using 'of' will fetch you the task while 'in' will fetch you the index.
   for (const task of tasks) {
     if (task.completed) {
       if (taskComp[task.userId] === undefined) {
