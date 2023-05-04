@@ -18,11 +18,14 @@ const URL = `https://swapi-api.alx-tools.com/api/films/${id}`;
 request(URL, (error, response, body) => {
   if (error) throw error;
   const filmChars = JSON.parse(body).characters;
-  for (const index in filmChars) {
+  const max_index = filmChars.length;
+  const index = 0;
+  while (index < max_index) {
     const character = filmChars[index];
     request(character, (err, res, bdy) => {
       if (err) throw err;
       console.log(JSON.parse(bdy).name);
     });
+    index++;
   }
 });
