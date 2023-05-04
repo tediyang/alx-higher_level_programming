@@ -19,7 +19,7 @@ request(URL, (error, response, body) => {
   const filmChars = JSON.parse(body).characters
     .map(character => request(character, (err, res, bdy) => {
       if (err) throw err;
-      JSON.parse(bdy).name;
+      return JSON.parse(bdy).name;
     }));
   console.log(filmChars);
 });
