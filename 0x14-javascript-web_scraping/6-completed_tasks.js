@@ -17,15 +17,15 @@ const URL = process.argv[2];
 request(URL, (err, res, body) => {
   if (err) throw err;
   const tasks = JSON.parse(body);
-  const task_comp = {};
+  const taskComp = {};
   for (const task in tasks) {
     if (task.completed) {
-        if (task_comp[task.userId] === undefined) {
-            task_comp[task.userId] = 1;
-        } else {
-            task_comp[task.userId]++;
-        }
+      if (taskComp[task.userId] === undefined) {
+        taskComp[task.userId] = 1;
+      } else {
+        taskComp[task.userId]++;
+      }
     }
   }
-  console.log(task_comp);
+  console.log(taskComp);
 });
