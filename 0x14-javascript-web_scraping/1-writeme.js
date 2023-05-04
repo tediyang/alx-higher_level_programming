@@ -5,8 +5,8 @@
   Step 1: Create a file module.
   Step 2: Create the filename.
   Step 3: words to write.
-  Step 3: Write the words into the file.
-  Step 4: Throw error if found.
+  Step 4: Write the words into the file.
+  Step 5: Throw error if found.
 */
 const fs = require('fs');
 const filename = process.argv[2];
