@@ -9,7 +9,7 @@ request(URL, (err, res, body) => {
   if (err) throw err;
   const films = JSON.parse(body).results
     .map(film => film.characters)
-    .map(character => character.filter(charMmov => charMov.includes('18')))
+    .map(character => character.filter(charMov => charMov.includes('18')))
     .filter(list => list.length !== 0);
   console.log(films.length);
 });
