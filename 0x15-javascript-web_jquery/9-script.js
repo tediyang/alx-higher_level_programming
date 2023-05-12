@@ -1,6 +1,4 @@
-$(document).addEventListener('DOMContentLoaded', () => {
-    const $hello = $('div#hello');
-    
+document.addEventListener('DOMContentLoaded', () => {
     $.ajax({
         type: "GET",
         url: "https://fourtonfish.com/hellosalut/?lang=fr",
