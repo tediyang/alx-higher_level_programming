@@ -13,8 +13,8 @@ document.addEventListener('DOMContentLoaded', () => {
     
 });
 
-$('document').ready(() => {
-    $.get('https://fourtonfish.com/hellosalut/?lang=fr', data => {
-      $('div#hello').text(data.hello);
-    });
-  });
+// $('document').ready(() => {
+//     $.get('https://fourtonfish.com/hellosalut/?lang=fr', data => {
+//       $('div#hello').text(data.hello);
+//     });
+//   });
